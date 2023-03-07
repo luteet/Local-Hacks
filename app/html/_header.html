@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="page-bg">
+			<div class="page-bg__element"></div>
+			<div class="page-bg__element"></div>
+			<div class="page-bg__element"></div>
+			<div class="page-bg__element"></div>
+		</div>
+		<header class="header container">
+			<div class="header__wrapper">
+				<a href="#" class="header__logo">
+					<img src="img/logo.svg" alt="Logo" width="164" height="75" loading="lazy" class="header__logo--img">
+				</a>
+				<nav class="header__nav">
+					<div class="header__nav--body">
+						<div class="header__nav--social header__social">
+							<ul class="header__social--list">
+								<li>
+									<a href="#" class="accent-icon" title="Telegram">
+										<svg width="16" height="14" viewBox="0 0 16 14">
+											<use xlink:href="img/sprites.svg#telegram"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="YouTube">
+										<svg width="19" height="13" viewBox="0 0 19 13">
+											<use xlink:href="img/sprites.svg#youtube"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="TikTok">
+										<svg width="16" height="18" viewBox="0 0 16 18">
+											<use xlink:href="img/sprites.svg#tik-tok"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header__nav--language header__language custom-select">
+							<div class="header__language--target custom-select__target">
+								En
+								<svg width="6" height="4" viewBox="0 0 6 4">
+									<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+								</svg>
+							</div>
+							<ul class="header__language--list custom-select__list">
+								<li>
+									<a href="#">
+										En 2
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										En 3
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										En 4
+									</a>
+								</li>
+							</ul>
+						</div>
+						<ul class="header__nav--list">
+							<li>
+								<a href="#" aria-label="Main"@@link_main>
+									<span>
+										Main
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Cheat catalog"@@link_catalog>
+									<span>
+										Cheat catalog
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Garantuees"@@link_garantuees>
+									<span>
+										Garantuees
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Chat"@@link_chat>
+									<span>
+										Chat
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Reviews"@@link_reviews>
+									<span>
+										Reviews
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Support" @@link_support>
+									<span>
+										Support
+									</span>
+								</a>
+							</li>
+						</ul>
+						<div class="header__nav--chat-btn-place header__chat-btn-place"></div>
+					</div>
+				</nav>
+				<div class="header__mob-chat-btn-place append-on-desktop-wrapper">
+					<a href="#" class="header__chat-btn append-on-desktop" data-append-on-desktop-to=".header__nav--chat-btn-place">
+						<svg width="21" height="21" viewBox="0 0 21 21">
+							<use xlink:href="img/sprites.svg#chat"></use>
+						</svg>
+						Online chat
+					</a>
+				</div>
+				<button class="header__burger" aria-label="Menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</header>

@@ -1,0 +1,487 @@
+@@include("html/_header.html", {
+	"link_main": ' class="current-page"',
+	"link_catalog": '',
+	"link_garantuees": '',
+	"link_chat": '',
+	"link_reviews": '',
+	"link_support": '',
+})
+
+	<main class="main">
+		<section class="best-shop container section-start">
+			<div class="best-shop__info">
+				<h1 class="best-shop__title main-title">
+					The best shop <br>
+					<mark>private cheats and more!</mark>
+				</h1>
+				<div class="best-shop__text">
+					<p>
+						This catalog of cheats has an endless number of unique possibilities!
+					</p>
+				</div>
+				<div class="best-shop__footer">
+					<a href="#" class="best-shop__btn btn">
+						Games catalog
+					</a>
+					<a href="#" class="best-shop__btn btn _alt">
+						Cheat list
+					</a>
+				</div>
+			</div>
+			<div class="best-shop__catalog games-catalog">
+				<div class="games-catalog__tabs swiper">
+					<div class="games-catalog__tabs--wrapper swiper-wrapper">
+						<div class="games-catalog__tabs--item swiper-slide">
+							<picture>
+								<source srcset="img/game-logo/logo-1.webp" type="image/webp">
+								<img src="img/game-logo/logo-1.png" alt="" width="77" height="42" loading="lazy">
+							</picture>
+						</div>
+						<div class="games-catalog__tabs--item swiper-slide">
+							<picture>
+								<source srcset="img/game-logo/logo-2.webp" type="image/webp">
+								<img src="img/game-logo/logo-2.png" alt="" width="81" height="38" loading="lazy">
+							</picture>
+						</div>
+						<div class="games-catalog__tabs--item swiper-slide">
+							<picture>
+								<source srcset="img/game-logo/logo-3.webp" type="image/webp">
+								<img src="img/game-logo/logo-3.png" alt="" width="112" height="45" loading="lazy">
+							</picture>
+						</div>
+						<div class="games-catalog__tabs--item swiper-slide">
+							<picture>
+								<source srcset="img/game-logo/logo-4.webp" type="image/webp">
+								<img src="img/game-logo/logo-4.png" alt="" width="109" height="38" loading="lazy">
+							</picture>
+						</div>
+						<div class="games-catalog__tabs--item swiper-slide">
+							<picture>
+								<source srcset="img/game-logo/logo-5.webp" type="image/webp">
+								<img src="img/game-logo/logo-5.png" alt="" width="108" height="34" loading="lazy">
+							</picture>
+						</div>
+						<div class="games-catalog__tabs--item swiper-slide">
+							<picture>
+								<source srcset="img/game-logo/logo-6.webp" type="image/webp">
+								<img src="img/game-logo/logo-6.png" alt="" width="49" height="29" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="games-catalog__block swiper">
+					<div class="games-catalog__block--wrapper swiper-wrapper">
+						<div class="games-catalog__item swiper-slide">
+							<ul class="games-catalog__item--list">
+								@@loop("html/_game-catalog-element.html", [
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS Private',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Neverwin',
+										"note": '<span class="games-catalog__element--note">Используйте на свой страх и риск</span>',
+										"class": ' _alt',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Snack',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Gydra',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+								])
+							</ul>
+						</div>
+						<div class="games-catalog__item swiper-slide">
+							<ul class="games-catalog__item--list">
+								@@loop("html/_game-catalog-element.html", [
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS Private',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Neverwin',
+										"note": '<span class="games-catalog__element--note">Используйте на свой страх и риск</span>',
+										"class": ' _alt',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Snack',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+								])
+							</ul>
+						</div>
+						<div class="games-catalog__item swiper-slide">
+							<ul class="games-catalog__item--list">
+								@@loop("html/_game-catalog-element.html", [
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS Private',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Neverwin',
+										"note": '<span class="games-catalog__element--note">Используйте на свой страх и риск</span>',
+										"class": ' _alt',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Snack',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Gydra',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+								])
+							</ul>
+						</div>
+						<div class="games-catalog__item swiper-slide">
+							<ul class="games-catalog__item--list">
+								@@loop("html/_game-catalog-element.html", [
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS Private',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Neverwin',
+										"note": '<span class="games-catalog__element--note">Используйте на свой страх и риск</span>',
+										"class": ' _alt',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Snack',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Gydra',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+								])
+							</ul>
+						</div>
+						<div class="games-catalog__item swiper-slide">
+							<ul class="games-catalog__item--list">
+								@@loop("html/_game-catalog-element.html", [
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS Private',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Neverwin',
+										"note": '<span class="games-catalog__element--note">Используйте на свой страх и риск</span>',
+										"class": ' _alt',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Snack',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Gydra',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+								])
+							</ul>
+						</div>
+						<div class="games-catalog__item swiper-slide">
+							<ul class="games-catalog__item--list">
+								@@loop("html/_game-catalog-element.html", [
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS Private',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Neverwin',
+										"note": '<span class="games-catalog__element--note">Используйте на свой страх и риск</span>',
+										"class": ' _alt',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Snack',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'Gydra',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+									{
+										"name": 'ABS',
+										"note": '<span class="games-catalog__element--note"><svg width="13" height="11" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg>Рекомендуем к использованию</span>',
+										"class": '',
+									},
+								])
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="popular-games">
+			<div class="popular-games__header container">
+				<h2 class="popular-games__title title">
+					Popular games
+				</h2>
+				<form action="#" class="popular-games__search">
+					<label class="popular-games__search--label">
+						<input type="search" class="popular-games__search--input" name="search" required placeholder="Search game">
+					</label>
+					<button class="popular-games__search--submit" type="submit" title="Поиск">
+						<svg width="22" height="22" viewBox="0 0 22 22">
+							<use xlink:href="img/sprites.svg#search"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<div class="popular-games__slider swiper container">
+				<div class="popular-games__slider--wrapper swiper-wrapper">
+					@@loop("html/_game-card.html", [
+						{
+							"class": 'popular-games__slider--slide swiper-slide ',
+							"image": '1',
+							"name": 'Fotnite'
+						},
+						{
+							"class": 'popular-games__slider--slide swiper-slide ',
+							"image": '2',
+							"name": 'Hunt showdown'
+						},
+						{
+							"class": 'popular-games__slider--slide swiper-slide ',
+							"image": '3',
+							"name": 'Blood Hunt'
+						},
+						{
+							"class": 'popular-games__slider--slide swiper-slide ',
+							"image": '4',
+							"name": 'Dead by daylight'
+						},
+						{
+							"class": 'popular-games__slider--slide swiper-slide ',
+							"image": '5',
+							"name": 'Dead by daylight'
+						},
+						{
+							"class": 'popular-games__slider--slide swiper-slide ',
+							"image": '6',
+							"name": 'Dead by daylight'
+						},
+						{
+							"class": 'popular-games__slider--slide swiper-slide ',
+							"image": '7',
+							"name": 'Dead by daylight'
+						},
+						{
+							"class": 'popular-games__slider--slide swiper-slide ',
+							"image": '8',
+							"name": 'Dead by daylight'
+						},
+						{
+							"class": 'popular-games__slider--slide swiper-slide ',
+							"image": '9',
+							"name": 'Dead by daylight'
+						},
+						{
+							"class": 'popular-games__slider--slide swiper-slide ',
+							"image": '10',
+							"name": 'Dead by daylight'
+						},
+					])
+				</div>
+			</div>
+		</section>
+		<section class="note container">
+			<div class="note__body">
+				<div class="note__icon">
+					<picture>
+						<source srcset="img/index/note/icon.webp" type="image/webp">
+						<img src="img/index/note/icon.png" alt="" width="70" height="74" loading="lazy">
+					</picture>
+				</div>
+				<div class="note__text">
+					Even when using any cheat in the game, you can encounter a block, so it is important to play with the utmost care!
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

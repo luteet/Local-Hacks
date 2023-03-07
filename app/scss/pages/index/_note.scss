@@ -1,0 +1,77 @@
+.note {
+
+	padding-top: 41px;
+
+	@include _768 {
+		padding-top: 60px;
+	}
+	
+	@include _992 {
+		padding-top: 90px;
+	}
+
+	// .note__body
+
+	&__body {
+		display: flex;
+		align-items: center;
+
+		padding: 12px 21px;
+		@include _768 {
+			padding: 15px 35px;
+		}
+		
+		@include _992 {
+			padding: 22px 44px;
+		}
+		overflow: hidden;
+		background: rgba(97, 105, 129, 0.1);
+		border: 1px solid #2A375F;
+		backdrop-filter: blur(25px);
+		border-radius: 16px;
+
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0; top: 0;
+			width: 250px; height: 250px;
+			z-index: -1;
+			transform: translate(-30%,-30%);
+			filter: blur(15px);
+			border-radius: 50%;
+			background: radial-gradient(circle, rgba(0,141,213,0.7) 0%, rgba(0,0,0,0) 40%);
+		}
+	}
+
+	// .note__icon
+
+	&__icon {
+		& img {
+			max-width: 48px; max-height: 50px;
+			object-fit: contain;
+			@include _768 {
+				max-width: none; max-height: none;
+			}
+		}
+	}
+
+	// .note__text
+
+	&__text {
+		padding-left: 20px;
+		font-size: 0.875rem;
+		@include _768 {
+			padding-left: 40px;
+			font-size: 1.175rem;
+		}
+		
+		@include _992 {
+			padding-left: 66px;
+			font-size: 1.375rem;
+		}
+
+		line-height: 166%;
+		color: #FFFFFF;
+	}
+}

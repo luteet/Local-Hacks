@@ -1,0 +1,43 @@
+
+@use 'sass:math';
+
+$container: 1420;
+
+:root {
+	--title-font: 'MuseoSansCyrl', sans-serif;
+	--main-font: 'MuseoSansCyrl', sans-serif;
+	
+	--accent: #648CF5;
+	--accent-active: #4a76e6;
+	--accent-dark: #1C57F0;
+	--accent-light: #648CF5;
+	--accent-2: #D20BD7;
+	--accent-2-hover: #e62fe9;
+	--accent-2-active: #b505b8;
+
+	--white: #FFF;
+	--black: #000;
+
+	--dark: #131627;
+	--gray: rgba(255, 255, 255, 0.49);
+	--caramel: #F4BA64;
+	--yellow: #FFB800;
+
+	--container-padding: 15px;
+}
+
+@font-face {
+	@include font-include('MuseoSansCyrl', 300, swap, normal, 'MuseoSansCyrl-300');
+}
+
+@font-face {
+	@include font-include('MuseoSansCyrl', 500, swap, normal, 'MuseoSansCyrl-500');
+}
+
+@font-face {
+	@include font-include('MuseoSansCyrl', 700, swap, normal, 'MuseoSansCyrl-700');
+}
+
+@font-face {
+	@include font-include('MuseoSansCyrl', 900, swap, normal, 'MuseoSansCyrl-900');
+}

@@ -1,0 +1,17 @@
+@import 'mixin';
+@import 'libs';
+@import 'null';
+@import 'vars';
+@import 'global';
+@import 'font';
+//@import 'popup';
+
+@import 'main-sections/header';
+
+
+@import 'pages/index/intro';
+@import 'pages/index/popular-games';
+@import 'pages/index/note';
+
+
+@import 'main-sections/footer';
