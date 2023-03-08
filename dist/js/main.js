@@ -227,8 +227,9 @@ function resize() {
 	if(windowSize != window.innerWidth) widthResizeCheck = true; else widthResizeCheck = false;
 	windowSize = window.innerWidth
 
+	html.style.setProperty("--height-screen", window.innerHeight + "px");
+
 	if(widthResizeCheck) {
-		html.style.setProperty("--height-screen", window.innerHeight + "px")
 		html.style.setProperty("--height-header", header.offsetHeight + "px");
 	}
 

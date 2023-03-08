@@ -1400,7 +1400,7 @@ body._active,body._popup-active {
 }
 
 .transparent-btn svg {
-    margin-right: 14px
+    margin-right: 7px
 }
 
 .transparent-btn:hover {
@@ -3306,6 +3306,10 @@ body._active,body._popup-active {
 @media (min-width:550px) {
     .transparent-btn {
         padding: 17px 30px
+    }
+
+    .transparent-btn svg {
+        margin-right: 14px
     }
 
     .large-text,.section-intro__text {

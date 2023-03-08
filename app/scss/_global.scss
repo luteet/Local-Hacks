@@ -483,7 +483,10 @@ body {
 	color: var(--accent);
 	transition: background .2s ease;
 	& svg {
-		margin-right: 14px;
+		margin-right: 7px;
+		@include _550 {
+			margin-right: 14px;
+		}
 	}
 	&:hover {
 		background: rgba(100, 141, 245, 0.155);
