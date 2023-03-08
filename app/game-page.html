@@ -1,0 +1,62 @@
+@@include("html/_header.html", {
+	"link_main": '',
+	"link_catalog": '',
+	"link_garantuees": '',
+	"link_chat": '',
+	"link_reviews": '',
+	"link_support": '',
+})
+
+	<main class="main">
+		<div class="page-address section-start container">
+			<ul>
+				<li>
+					<a href="index.html">
+						Home
+					</a>
+				</li>
+				<li>
+					<a href="games-cheat.html">
+						Game Cheats
+					</a>
+				</li>
+				<li>
+					<a>
+						Fortnite
+					</a>
+				</li>
+			</ul>
+		</div>
+		<section class="game-page container">
+			<div class="game-page__banner">
+				<picture>
+					<source srcset="img/game/banner.webp" type="image/webp">
+					<img src="img/game/banner.jpg" alt="" width="1400" height="335" loading="lazy">
+				</picture>
+				<h2 class="game-page__name title">
+					Fortnite
+				</h2>
+			</div>
+			<h3 class="game-page__title title">
+				Сheat list
+			</h3>
+			<div class="game-page__list games-cheat__list">
+				@@loop("html/_game-card.html", [
+					{
+						"class": 'games-cheat__card ',
+						"label": '<b class="game-card__label _top"><svg width="11" height="10" viewBox="0 0 13 11"><use xlink:href="img/sprites.svg#star"></use></svg> TOP</b>',
+						"image": '1',
+						"name": 'Fotnite'
+					},
+					{
+						"class": 'games-cheat__card ',
+						"label": '',
+						"image": '2',
+						"name": 'Shack private'
+					},
+				])
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

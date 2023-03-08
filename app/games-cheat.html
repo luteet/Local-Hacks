@@ -1,0 +1,108 @@
+@@include("html/_header.html", {
+	"link_main": '',
+	"link_catalog": ' class="current-page"',
+	"link_garantuees": '',
+	"link_chat": '',
+	"link_reviews": '',
+	"link_support": '',
+})
+
+	<main class="main">
+		<div class="page-address section-start container">
+			<ul>
+				<li>
+					<a href="index.html">
+						Home
+					</a>
+				</li>
+				<li>
+					<a>
+						Game Cheats
+					</a>
+				</li>
+			</ul>
+		</div>
+		<section class="games-cheat container">
+			<div class="games-cheat__header popular-games__header">
+				<h2 class="popular-games__title games-cheat__title title">
+					Games cheat
+				</h2>
+				<form action="#" class="popular-games__search games-cheat__search">
+					<label class="popular-games__search--label">
+						<input type="search" class="popular-games__search--input" name="search" required placeholder="Search game">
+					</label>
+					<button class="popular-games__search--submit" type="submit" title="Поиск">
+						<svg width="22" height="22" viewBox="0 0 22 22">
+							<use xlink:href="img/sprites.svg#search"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<div class="games-cheat__list">
+				@@loop("html/_game-card.html", [
+					{
+						"class": 'games-cheat__card ',
+						"label": '<b class="game-card__label">6 читов</b>',
+						"image": '1',
+						"name": 'Fotnite'
+					},
+					{
+						"class": 'games-cheat__card ',
+						"label": '<b class="game-card__label">6 читов</b>',
+						"image": '2',
+						"name": 'Hunt showdown'
+					},
+					{
+						"class": 'games-cheat__card ',
+						"label": '<b class="game-card__label">6 читов</b>',
+						"image": '3',
+						"name": 'Blood Hunt'
+					},
+					{
+						"class": 'games-cheat__card ',
+						"label": '<b class="game-card__label">6 читов</b>',
+						"image": '4',
+						"name": 'Dead by daylight'
+					},
+					{
+						"class": 'games-cheat__card ',
+						"label": '<b class="game-card__label">6 читов</b>',
+						"image": '5',
+						"name": 'Dead by daylight'
+					},
+					{
+						"class": 'games-cheat__card ',
+						"label": '<b class="game-card__label">6 читов</b>',
+						"image": '6',
+						"name": 'Dead by daylight'
+					},
+					{
+						"class": 'games-cheat__card ',
+						"label": '<b class="game-card__label">6 читов</b>',
+						"image": '7',
+						"name": 'Dead by daylight'
+					},
+					{
+						"class": 'games-cheat__card ',
+						"label": '<b class="game-card__label">6 читов</b>',
+						"image": '8',
+						"name": 'Dead by daylight'
+					},
+					{
+						"class": 'games-cheat__card ',
+						"label": '<b class="game-card__label">6 читов</b>',
+						"image": '9',
+						"name": 'Dead by daylight'
+					},
+					{
+						"class": 'games-cheat__card ',
+						"label": '<b class="game-card__label">6 читов</b>',
+						"image": '10',
+						"name": 'Dead by daylight'
+					},
+				])
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

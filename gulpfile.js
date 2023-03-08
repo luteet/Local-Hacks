@@ -52,6 +52,7 @@ function images() {
 function scriptsLib() {
     return src([
         'node_modules/swiper/swiper-bundle.min.js', // Слайдер
+        'node_modules/fslightbox/index.js', // Галерея
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

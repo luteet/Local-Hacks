@@ -1,0 +1,51 @@
+.games-cheat {
+
+	padding-top: 15px;
+	margin-bottom: 12px;
+	@include _768 {
+		padding-top: 37px;
+	}
+	
+	@include _992 {
+		margin-bottom: 30px;
+	}
+
+	// .games-cheat__header
+
+	&__header {
+	}
+
+	&__search .popular-games__search--label {
+		background: var(--dark-2);
+	}
+
+	// .games-cheat__list
+
+	&__list {
+		padding-top: 21px;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		@include _426 {
+			gap: 30px;
+			padding-top: 35px;
+		}
+		@include _768 {
+			grid-template-columns: repeat(3,1fr);
+		}
+		@include _992 {
+			grid-template-columns: repeat(4,1fr);
+		}
+		
+	}
+
+	&__card {
+		& .game-card__image {
+			min-height: 210px;
+			@include _426 {
+				min-height: 377px;
+			}
+		}
+	}
+}

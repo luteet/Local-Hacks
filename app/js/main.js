@@ -62,70 +62,6 @@ body.addEventListener('click', function (event) {
 	},0)
 }) */
 
-// =-=-=-=-=-=-=-=-=-=-=-=- <resize> -=-=-=-=-=-=-=-=-=-=-=-=
-
-let resizeCheck = {}, windowSize, widthResizeCheck;
-
-function resizeCheckFunc(size, minWidth, maxWidth) {
-	if (windowSize <= size && (resizeCheck[String(size)] == true || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != false) {
-		resizeCheck[String(size)] = false;
-		maxWidth(); // < size
-	}
-
-	if (windowSize >= size && (resizeCheck[String(size)] == false || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != true) {
-		resizeCheck[String(size)] = true;
-		minWidth(); // > size
-	}
-}
-
-let appendOnDesktop = [];
-document.querySelectorAll('.append-on-desktop').forEach(appendElement => {
-	appendOnDesktop.push([appendElement, document.querySelector(appendElement.dataset.appendOnDesktopTo), appendElement.closest('.append-on-desktop-wrapper')])
-	delete appendElement.dataset.appendOnDesktopTo;
-})
-
-function resize() {
-
-	if(windowSize != window.innerWidth) widthResizeCheck = true; else widthResizeCheck = false;
-	windowSize = window.innerWidth
-
-	if(widthResizeCheck) {
-		html.style.setProperty("--height-screen", window.innerHeight + "px")
-		html.style.setProperty("--height-header", header.offsetHeight + "px");
-		
-	}
-
-	resizeCheckFunc(992,
-		function () {  // screen > 992px
-
-			Array.from(appendOnDesktop).forEach(appendOnDesktop => {
-				if(appendOnDesktop[1]) {
-					appendOnDesktop[1].append(appendOnDesktop[0]);
-				}
-			})
-
-		},
-		function () {  // screen < 992px
-			
-			Array.from(appendOnDesktop).forEach(appendOnDesktop => {
-				if(appendOnDesktop[2]) {
-					appendOnDesktop[2].append(appendOnDesktop[0]);
-				}
-			})
-
-		}
-	);
-
-}
-
-resize();
-
-window.onresize = resize;
-
-// =-=-=-=-=-=-=-=-=-=-=-=- </resize> -=-=-=-=-=-=-=-=-=-=-=-=
-
-
-
 // =-=-=-=-=-=-=-=-=-=-=-=- <scroll> -=-=-=-=-=-=-=-=-=-=-=-=
 
 let pageCoords = 0;
@@ -201,6 +137,7 @@ let popularGamesSlider = new Swiper('.popular-games__slider', {
 		},
 	}
 })
+
 /* popularGamesSlider.on("afterInit", function () {
 
 }) */
@@ -243,16 +180,137 @@ let gamesCatalogBlock = new Swiper('.games-catalog__block', {
 	}
 })
 
+let cheatGallery = new Swiper('.cheat__gallery--slider', {
+	slidesPerView: 3,
+	spaceBetween: 15,
+	direction: "vertical",
+	scrollbar: {
+		el: ".cheat__gallery-scrollbar.swiper-scrollbar",
+	//hide: true,
+	},
+	breakpoints: {
+		550: {
+			slidesPerView: "auto",
+			direction: "horizontal",
+		},
+	}
+});
+
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
-/* 
-// =-=-=-=-=-=-=-=-=-=-=-=- <animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
-AOS.init({
-	//disable: "mobile",
-});
+// =-=-=-=-=-=-=-=-=-=-=-=- <resize> -=-=-=-=-=-=-=-=-=-=-=-=
 
-// =-=-=-=-=-=-=-=-=-=-=-=- </animation> -=-=-=-=-=-=-=-=-=-=-=-=
+let resizeCheck = {}, windowSize, widthResizeCheck;
 
-*/
+function resizeCheckFunc(size, minWidth, maxWidth) {
+	if (windowSize <= size && (resizeCheck[String(size)] == true || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != false) {
+		resizeCheck[String(size)] = false;
+		maxWidth(); // < size
+	}
+
+	if (windowSize >= size && (resizeCheck[String(size)] == false || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != true) {
+		resizeCheck[String(size)] = true;
+		minWidth(); // > size
+	}
+}
+
+let appendOnDesktop = [];
+document.querySelectorAll('.append-on-desktop').forEach(appendElement => {
+	appendOnDesktop.push([appendElement, document.querySelector(appendElement.dataset.appendOnDesktopTo), appendElement.closest('.append-on-desktop-wrapper')])
+	delete appendElement.dataset.appendOnDesktopTo;
+})
+
+function resize() {
+
+	if(windowSize != window.innerWidth) widthResizeCheck = true; else widthResizeCheck = false;
+	windowSize = window.innerWidth
+
+	if(widthResizeCheck) {
+		html.style.setProperty("--height-screen", window.innerHeight + "px")
+		html.style.setProperty("--height-header", header.offsetHeight + "px");
+	}
+
+	if(!html.classList.contains('fslightbox-open')) {
+		html.style.setProperty("--width-scrollbar", window.innerWidth - body.offsetWidth + "px");
+		//console.log(window.innerWidth - body.offsetWidth)
+	}
+
+	resizeCheckFunc(992,
+		function () {  // screen > 992px
+
+			Array.from(appendOnDesktop).forEach(appendOnDesktop => {
+				if(appendOnDesktop[1]) {
+					appendOnDesktop[1].append(appendOnDesktop[0]);
+				}
+			})
+
+		},
+		function () {  // screen < 992px
+			
+			Array.from(appendOnDesktop).forEach(appendOnDesktop => {
+				if(appendOnDesktop[2]) {
+					appendOnDesktop[2].append(appendOnDesktop[0]);
+				}
+			})
+
+		}
+	);
+
+	resizeCheckFunc(550,
+		function () {  // screen >
+
+			if(cheatGallery && document.querySelector('.cheat__gallery--slider')) {
+				cheatGallery.destroy(true, true);
+				cheatGallery = new Swiper('.cheat__gallery--slider', {
+					slidesPerView: "auto",
+					spaceBetween: 15,
+					scrollbar: {
+						el: ".cheat__gallery-scrollbar.swiper-scrollbar",
+					//hide: true,
+					},
+				});
+			}
+
+		},
+		function () {  // screen <
+			
+			if(cheatGallery && document.querySelector('.cheat__gallery--slider')) {
+				cheatGallery.destroy(true, true);
+				cheatGallery = new Swiper('.cheat__gallery--slider', {
+					slidesPerView: 3,
+					spaceBetween: 15,
+					direction: "vertical",
+					scrollbar: {
+						el: ".cheat__gallery-scrollbar.swiper-scrollbar",
+						//hide: true,
+					},
+				});
+			}
+
+		}
+	);
+
+}
+
+resize();
+
+window.onresize = resize;
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </resize> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+const cheatCalculatorRadioItemInput = document.querySelectorAll('.cheat__calculator--radio-item input');
+
+cheatCalculatorRadioItemInput.forEach(cheatCalculatorRadioItemInput => {
+	cheatCalculatorRadioItemInput.addEventListener('change', function () {
+		
+		const cheatCalculator = cheatCalculatorRadioItemInput.closest('.cheat__calculator'),
+			  cheatCalculatorInput = cheatCalculator.querySelector('.cheat__calculator--input');
+
+		cheatCalculatorInput.value = cheatCalculatorRadioItemInput.value;
+		
+	})
+})
+

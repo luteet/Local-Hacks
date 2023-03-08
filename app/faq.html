@@ -1,0 +1,106 @@
+@@include("html/_header.html", {
+	"link_main": '',
+	"link_catalog": '',
+	"link_garantuees": '',
+	"link_chat": '',
+	"link_reviews": '',
+	"link_support": ' class="current-page"',
+})
+
+	<main class="main">
+		<div class="page-address section-start container">
+			<ul>
+				<li>
+					<a href="index.html">
+						Home
+					</a>
+				</li>
+				<li>
+					<a>
+						FAQ & Поддержка
+					</a>
+				</li>
+			</ul>
+		</div>
+		<section class="faq">
+			<div class="faq__intro section-intro container">
+				<div class="section-intro__icon">
+					<img src="img/faq/section-logo.svg" width="92" height="92" loading="lazy" alt="">
+				</div>
+				<div class="section-intro__info">
+					<h2 class="section-intro__title title">
+						FAQ and Support
+					</h2>
+					<div class="section-intro__text">
+						<p>
+							Be sure to update and download all drivers and necessary programs
+						</p>
+					</div>
+				</div>
+			</div>
+			<article class="faq__driver container">
+				<h3 class="faq__driver--title title">
+					Popular driver
+				</h3>
+				<ul class="faq__driver--list">
+					@@loop("html/_faq-driver-element.html", [
+
+						{},
+						{},
+						{},
+
+						{},
+						{},
+						{},
+
+					])
+				</ul>
+			</article>
+			<article class="faq__driver container _transparent">
+				<h3 class="faq__driver--title title">
+					Disabling Protection
+				</h3>
+				<ul class="faq__driver--list">
+					@@loop("html/_faq-driver-element.html", [
+
+						{},
+						{},
+						{},
+
+						{},
+						{},
+						{},
+
+					])
+				</ul>
+			</article>
+			<div class="faq__helped container txt-center">
+				<div class="faq__helped--body">
+					<h3 class="faq__helped--title title">
+						Nothing helped?
+					</h3>
+					<div class="faq__helped--text">
+						<p>
+							Contact our technical support, they will surely help you help and answer all your questions!
+						</p>
+					</div>
+					<div class="faq__helped--footer">
+						<a href="#" class="faq__helped--btn transparent-btn">
+							<svg width="15" height="13" viewBox="0 0 16 14">
+								<use xlink:href="img/sprites.svg#telegram"></use>
+							</svg>
+							Telegram
+						</a>
+						<a href="#" class="faq__helped--btn transparent-btn _alt">
+							<svg width="25" height="16" viewBox="0 0 25 16">
+								<use xlink:href="img/sprites.svg#discord"></use>
+							</svg>
+							Discord
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

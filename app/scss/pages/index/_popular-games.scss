@@ -69,6 +69,7 @@
 
 			font-weight: 300;
 			line-height: 166%;
+			width: 100%;
 
 			color: rgba(255, 255, 255, 0.8);
 			transition: color .2s ease;
@@ -124,6 +125,9 @@
 
 		&--slide {
 			//width: auto;
+			& .game-card__image {
+				min-height: 377px;
+			}
 			@include _992 {
 				opacity: 0.25;
 				&.swiper-slide-active, &.swiper-slide-active + &.swiper-slide, &.swiper-slide-active + &.swiper-slide + &.swiper-slide, &.swiper-slide-active + &.swiper-slide + &.swiper-slide + &.swiper-slide {
@@ -141,7 +145,10 @@
 	// .game-card__body
 
 	&__body {
-		border-radius: 18px;
+		border-radius: 10px;
+		@include _426 {
+			border-radius: 18px;
+		}
 		overflow: hidden;
 		position: relative;
 
@@ -156,9 +163,11 @@
 	&__image {
 		position: relative;
 		width: 100%; padding-top: 100%;
-		min-height: 377px;
 
-		border-radius: 20px;
+		border-radius: 15px;
+		@include _426 {
+			border-radius: 20px;
+		}
 		overflow: hidden;
 		
 		& img {
@@ -176,11 +185,8 @@
 		position: absolute;
 		left: 50%; top: 50%;
 		transform: translate(-50%,-100%);
-		max-width: 150px; width: 100%;
-		
-		@media (any-hover: hover) {
-			opacity: 0; visibility: hidden;	
-		}
+		max-width: 150px; width: calc(100% - 20px);
+		opacity: 0; visibility: hidden;
 	}
 
 	&__body:hover &__btn {
@@ -191,11 +197,34 @@
 
 	&__label {
 		background: rgba(15, 23, 51, 0.87);
+		z-index: 2;
+		&._top {
+			background: var(--accent-2);
+			backdrop-filter: none;
+
+			color: var(--white);
+			fill: var(--white);
+			& svg {
+				margin-right: 5px;
+			}
+			font-weight: 900;
+			@include _426 {
+				font-size: 0.875rem;
+			}
+		}
 		backdrop-filter: blur(22.5px);
 		border-radius: 18px 0px;
-		display: inline-block;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		align-self: start; justify-self: start;
-		padding: 9px 16px;
+		padding: 6px 10px;
+		font-size: 0.875rem;
+		@include _426 {
+			font-size: 1rem;
+			padding: 9px 16px;
+			min-width: 89px;
+		}
 		margin: -1px 0 0 -1px;
 		color: var(--accent);
 	}
@@ -204,15 +233,44 @@
 
 	&__info {
 		align-self: end;
+		color: var(--white);
 
-		padding: 16px 20px 36px 20px;
-		margin-bottom: -20px; margin-left: -4px; margin-right: -4px;
+		padding: 5px 15px 10px 15px;
+		margin-bottom: -6px; margin-left: -4px; margin-right: -4px;
 
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		flex-direction: column;
+		@include _426 {
+			flex-direction: row;
+			padding: 16px 20px 36px 20px;
+			margin-bottom: -20px;
+		}
 
 		background: rgba(15, 23, 51, 0.87);
 		backdrop-filter: blur(22.5px);
+
+		& h3 {
+			font-size: 0.75rem;
+			@include _426 {
+				font-size: 0.875rem;
+			}
+			@include _768 {
+				font-size: 1rem;
+			}
+			
+			@include _992 {
+				font-size: 1.125rem;	
+			}
+			font-weight: 300;
+		}
+		& b {
+			font-size: 1rem;
+			
+			@include _992 {
+				font-size: 1.125rem;	
+			}
+		}
 	}
 }

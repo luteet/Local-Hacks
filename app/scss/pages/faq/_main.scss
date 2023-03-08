@@ -1,0 +1,257 @@
+.faq {
+
+	padding-top: 40px;
+
+	// .faq__intro
+
+	&__intro {
+		
+	}
+
+	// .faq__icon
+
+	&__icon {
+		
+	}
+
+	// .faq__info
+
+	&__info {
+		
+	}
+
+	// .faq__title
+
+	&__title {
+	}
+
+	// .faq__text
+
+	&__text {
+		
+	}
+
+	// .faq__driver
+
+	&__driver {
+
+		padding-top: 37px; padding-bottom: 49px;
+
+		@include _768 {
+			padding-top: 51px; padding-bottom: 51px;
+		}
+
+		background: linear-gradient(93.66deg, rgba(45, 64, 124, 0.1) 9.22%, rgba(97, 105, 129, 0) 108.71%);
+		&._transparent {
+			background: transparent;
+		}
+
+		// .faq__driver--title
+
+		&--title {
+		}
+
+		// .faq__driver--list
+
+		&--list {
+			display: grid;
+			grid-template-columns: 100%;
+			gap: 15px 20px;
+
+			padding-top: 15px;
+			@include _768 {
+				grid-template-columns: repeat(auto-fit, minmax(400px,auto));
+				padding-top: 35px;
+			}
+			
+		}
+
+		// .faq__driver--item
+
+		&--item {
+			
+		}
+	}
+
+	// .faq__driver-element
+
+	&__driver-element {
+
+		padding: 16px 19px;
+
+		background: #272F5B;
+		border-radius: 11px;
+
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		// .faq__driver-element--icon
+
+		&--icon {
+			margin-right: 19px;
+			@include _768 {
+				margin-right: 21px;
+			}
+
+			width: 54px; height: 54px;
+			border-radius: 7px;
+			background: var(--dark-2);
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		// .faq__driver-element--name
+
+		&--name {
+			flex: 0 1 calc(100% - 54px - 40px);
+			margin-right: 19px;
+			font-weight: 900;
+			font-size: 0.875rem;
+			line-height: 133.5%;
+			color: #FFFFFF;
+
+			@include _768 {
+				font-size: 1rem;
+				margin-right: 21px;
+				flex: 0 1 calc(100% - 54px - 50px);
+			}
+		}
+
+		// .faq__driver-element--footer
+
+		&--footer {
+			padding-top: 23px;
+			width: 100%;
+			display: flex;
+		}
+
+		// .faq__driver-element--size
+
+		&--size {
+			min-width: 130px;
+			@include _768 {
+				min-width: 170px;
+			}
+
+			padding: 19px 14px;
+			background: rgba(19, 22, 35, 0.21);
+			border-radius: 4px;
+
+			font-size: 0.9375rem;
+			line-height: 133.5%;
+			color: #8D92B1;
+			fill: #8D92B1;
+
+			margin-right: 10px;
+
+			& svg {
+				margin-right: 12px;
+			}
+
+			display: flex;
+			align-items: center;
+		}
+
+		// .faq__driver-element--btn
+
+		&--btn {
+			flex: 1 1 auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	// .faq__helped
+
+	&__helped {
+
+		&--body {
+			background: rgba(97, 105, 129, 0.1);
+			border: 1px solid #2A375F;
+			backdrop-filter: blur(25px);
+			border-radius: 16px;
+			padding: 25px 15px;
+			@include _550 {
+				padding: 47px 26px;
+			}
+
+			overflow: hidden;
+
+			&::before, &::after {
+				@include _768 {
+					content: '';
+					position: absolute;
+					width: 892px; height: 892px;
+					border-radius: 50%;
+					opacity: .8;
+					filter: blur(15px);
+					z-index: -1;	
+				}
+			}
+
+			&::before {
+				left: 0; top: 0;
+				transform: translate(-20%,-30%);
+				background: radial-gradient(circle, rgba(76, 11, 215, 0.29) 0%, rgba(0,0,0,0) 70%);
+			}
+
+			&::after {
+				right: 0; top: 0;
+				transform: translate(50%,-50%);
+				background: radial-gradient(circle, rgba(210, 11, 215, 0.29) 0%, rgba(0,0,0,0) 70%);
+			}
+		}
+
+		// .faq__helped--title
+
+		&--title {
+		}
+
+		// .faq__helped--text
+
+		&--text {
+			padding-top: 10px;
+			font-size: 0.875rem;
+			@include _550 {
+				font-size: 1rem;
+			}
+			@include _768 {
+				font-size: 1.125rem;
+			}
+			
+			@include _992 {
+				font-size: 1.25rem;
+			}
+			line-height: 166%;
+			text-align: center;
+			color: rgba(255, 255, 255, 0.49);
+
+		}
+
+		// .faq__helped--footer
+
+		&--footer {
+			padding-top: 25px; margin: -4px;
+			@include _550 {
+				margin: -22.5px;
+			}
+
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		// .faq__helped--btn
+
+		&--btn {
+			margin: 4px;
+			@include _550 {
+				margin: 22.5px;
+			}
+		}
+	}
+}
