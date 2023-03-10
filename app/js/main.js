@@ -267,6 +267,7 @@ function resize() {
 				cheatGallery = new Swiper('.cheat__gallery--slider', {
 					slidesPerView: "auto",
 					spaceBetween: 15,
+					mousewheel: true,
 					scrollbar: {
 						el: ".cheat__gallery-scrollbar.swiper-scrollbar",
 					//hide: true,
