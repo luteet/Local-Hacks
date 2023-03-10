@@ -402,7 +402,28 @@ body {
 	&::-webkit-scrollbar-track {
 		background: rgba(217, 217, 217, 0.07);
 	}
+
+	& .os-scrollbar-track {
+		background: rgba(217, 217, 217, 0.07) !important;
+	}
+
+	& .os-scrollbar-handle {
+		background: var(--accent-dark) !important;
+	}
+
+	& .os-content {
+		padding-right: 12px !important;
+	}
+	
 }
+
+.os-theme-dark>.os-scrollbar-vertical, .os-theme-light>.os-scrollbar-vertical {
+	width: 8px !important;
+}
+
+/* .os-theme-dark>.os-scrollbar-vertical, .os-theme-light>.os-scrollbar-vertical {
+	width: 4px;
+} */
 
 .switch-checkbox {
 
@@ -459,9 +480,7 @@ body {
     &__text {
 		& a {
 			color: var(--accent);
-			text-decoration-skip-ink: none;
-			text-decoration-thickness: 0.4rem;
-			text-decoration: underline;
+			border-bottom: 1px solid var(--accent);
 		}
     }
 }

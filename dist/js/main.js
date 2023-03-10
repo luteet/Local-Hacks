@@ -316,3 +316,8 @@ cheatCalculatorRadioItemInput.forEach(cheatCalculatorRadioItemInput => {
 	})
 })
 
+
+document.querySelectorAll('.scrollbar').forEach(scrollbar => {
+	OverlayScrollbars(scrollbar, {});
+})
+

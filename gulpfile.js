@@ -53,6 +53,7 @@ function scriptsLib() {
     return src([
         'node_modules/swiper/swiper-bundle.min.js', // Слайдер
         'node_modules/fslightbox/index.js', // Галерея
+        'app/js/OverlayScrollbars.min.js', // scrollbar
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -125,6 +126,7 @@ function stylesLib() {
     return src([
         'node_modules/normalize.css/normalize.css',
         'node_modules/swiper/swiper-bundle.min.css', // Слайдер
+        'app/css/OverlayScrollbars.min.css', // scrollbar
     ])
     .pipe(concat('_libs.scss'))
     .pipe(dest('app/scss'))

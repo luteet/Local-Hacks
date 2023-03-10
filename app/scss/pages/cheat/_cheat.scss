@@ -495,7 +495,10 @@
 			@include _550 {
 				padding-top: 21px;
 				grid-template-columns: auto auto;
+				font-size: 1rem;
 			}
+
+			font-size: 0.875rem;
 
 			& dt {
 				color: rgba(255, 255, 255, 0.42);
