@@ -141,8 +141,9 @@
 						<div class="cheat__gallery-scrollbar swiper-scrollbar"></div>
 					</div>
 				</div>
-				<div class="cheat__checkout-mob-place append-on-desktop-wrapper">
-					<form action="#" class="cheat__checkout block append-on-desktop" data-append-on-desktop-to=".cheat__checkout-place">
+				<div class="cheat__checkout-mob-place append-on-desktop-wrapper visible-on-table">
+					<!-- <form action="#" class="cheat__checkout block append-on-desktop" data-append-on-desktop-to=".cheat__checkout-place"></form> -->
+					<form action="#" class="cheat__checkout block">
 						<h3 class="cheat__checkout--title title _min-2">
 							Checkout
 						</h3>
@@ -339,8 +340,74 @@
 				</div>
 			</main>
 			<aside class="cheat__aside">
-				<div class="cheat__checkout-place"></div>
-				<div class="cheat__support-place"></div>
+				<div class="cheat__checkout-place hide-on-table">
+					<form action="#" class="cheat__checkout block">
+						<h3 class="cheat__checkout--title title _min-2">
+							Checkout
+						</h3>
+						<div class="cheat__checkout--calculator cheat__calculator">
+							<h4>
+								Days
+							</h4>
+							<label class="cheat__calculator--label">
+								<input type="number" name="days-result" max="25" placeholder="0" readonly required class="cheat__calculator--input">
+								<span class="cheat__calculator--max-price">
+									$115
+								</span>
+							</label>
+							<div class="cheat__calculator--radio-row">
+								<label class="cheat__calculator--radio-item">
+									<input type="radio" name="days" value="15">
+									<span>
+										15
+									</span>
+								</label>
+								<label class="cheat__calculator--radio-item">
+									<input type="radio" name="days" value="20">
+									<span>
+										20
+									</span>
+								</label>
+								<label class="cheat__calculator--radio-item">
+									<input type="radio" name="days" value="25">
+									<span>
+										25
+									</span>
+								</label>
+							</div>
+							<b class="cheat__calculator--result title">
+								115$
+							</b>
+						</div>
+						<div class="cheat__checkout--footer">
+							<button class="cheat__checkout--submit btn" type="submit">
+								Pay now
+							</button>
+							<div class="cheat__checkout--checkbox switch-checkbox">
+								<label class="switch-checkbox__label">
+									<input type="checkbox" name="user-agreement" required checked class="switch-checkbox__input">
+									<span class="switch-checkbox__element"></span>
+									<span class="switch-checkbox__text">
+										I agree with the <a href="#">user agreement</a>
+									</span>
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="cheat__support-place visible-on-table">
+					<div class="cheat__support block _min">
+						<div class="cheat__support--icon">
+							<img src="img/cheat/support.svg" width="50" height="50" loading="lazy" alt="">
+						</div>
+						<div class="cheat__support--text">
+							Have questions <br> or problems?
+						</div>
+						<a href="#" class="cheat__support--btn transparent-btn">
+							Support
+						</a>
+					</div>
+				</div>
 				<div class="cheat__popular block _min">
 					<h3 class="cheat__popular--title title _min">
 						Popular cheat
@@ -400,8 +467,9 @@
 						])
 					</div>
 				</div>
-				<div class="cheat__mob-support-place append-on-desktop-wrapper">
-					<div class="cheat__support block append-on-desktop _min" data-append-on-desktop-to=".cheat__support-place">
+				<div class="cheat__mob-support-place append-on-desktop-wrapper visible-on-table">
+					<!-- <div class="cheat__support block append-on-desktop _min" data-append-on-desktop-to=".cheat__support-place"></div> -->
+					<div class="cheat__support block _min">
 						<div class="cheat__support--icon">
 							<img src="img/cheat/support.svg" width="50" height="50" loading="lazy" alt="">
 						</div>

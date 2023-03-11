@@ -92,7 +92,7 @@ window.addEventListener('scroll', scroll)
 
 let gamesCatalogTabsSlider = new Swiper('.games-catalog__tabs', {
 
-	spaceBetween: 28,
+	spaceBetween: 0,
 	slidesPerView: "auto",
 	centeredSlides: false,
 
@@ -126,6 +126,7 @@ let popularGamesSlider = new Swiper('.popular-games__slider', {
 	breakpoints: {
 		992: {
 			slidesPerView: 4,
+			spaceBetween: 30,
 		},
 		700: {
 			slidesPerView: 3,
@@ -137,36 +138,6 @@ let popularGamesSlider = new Swiper('.popular-games__slider', {
 		},
 	}
 })
-
-/* popularGamesSlider.on("afterInit", function () {
-
-}) */
-
-/* gamesCatalogTabsSlider.on('tap', function () {
-	if(gamesCatalogTabsSlider.clickedSlide) {
-		const activeSlide = gamesCatalogTabsSlider.el.querySelector('.swiper-slide._active'),
-		clickedSlide = gamesCatalogTabsSlider.clickedSlide;
-
-		if(activeSlide) {
-			activeSlide.classList.remove('_active');
-	
-			setTimeout(() => {
-				activeSlide.classList.remove('_filter');
-			},200)
-		}
-
-		setTimeout(() => {
-			setTimeout(() => {
-				clickedSlide.classList.add('_filter');
-			},200)
-	
-			setTimeout(() => {
-				clickedSlide.classList.add('_active');
-			},400)
-		},0)
-		
-	}
-}); */
 
 let gamesCatalogBlock = new Swiper('.games-catalog__block', {
 	slidesPerView: 1,
@@ -182,7 +153,7 @@ let gamesCatalogBlock = new Swiper('.games-catalog__block', {
 
 let cheatGallery = new Swiper('.cheat__gallery--slider', {
 	slidesPerView: 3,
-	spaceBetween: 15,
+	//spaceBetween: 15,
 	direction: "vertical",
 	scrollbar: {
 		el: ".cheat__gallery-scrollbar.swiper-scrollbar",
@@ -235,7 +206,6 @@ function resize() {
 
 	if(!html.classList.contains('fslightbox-open')) {
 		html.style.setProperty("--width-scrollbar", window.innerWidth - body.offsetWidth + "px");
-		//console.log(window.innerWidth - body.offsetWidth)
 	}
 
 	resizeCheckFunc(992,

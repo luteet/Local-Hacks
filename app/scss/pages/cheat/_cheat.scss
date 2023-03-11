@@ -205,8 +205,10 @@
 			
 			height: 455px;
 			padding: 0 10px 0 0; margin-right: 0 -10px 0 0;
+			overflow-y: auto;
 			@include _550 {
 				height: 171px;
+				overflow-y: hidden; overflow-x: auto;
 				padding: 0 20px 30px 10px; margin: 0 -20px 0 -10px;
 				mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 93%, rgba(0,0,0,0) 98%);
 			}
@@ -215,11 +217,34 @@
 				padding: 0 30px 30px 10px; margin: 0 -30px 0 -10px;
 			}
 			
+			&.swiper-initialized {
+				overflow-x: hidden; overflow-y: hidden;
+			}
+			
+			&::-webkit-scrollbar {
+				width: 4px; height: 4px;
+				border-radius: 27px;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: var(--accent-dark);
+				border-radius: 27px;
+			}
+			&::-webkit-scrollbar-track {
+				background: rgba(217, 217, 217, 0.07);
+			}
 		}
 
 		// .cheat__gallery--wrapper
 
 		&--wrapper {
+			flex-direction: column;
+			@include _550 {
+				flex-direction: row;
+			}
+		}
+
+		&.swiper-initialized &--slide:last-child {
+			margin-right: 0;
 		}
 
 		// .cheat__gallery--slide
@@ -227,6 +252,11 @@
 		&--slide {
 			width: 251px; height: 141px;
 			position: relative;
+
+			margin-top: 15px;
+			@include _550 {
+				margin-right: 15px; margin-top: 0;
+			}
 
 			margin-left: auto; margin-right: auto;			
 
@@ -350,6 +380,12 @@
 
 		&--checkbox {
 			margin-top: 17px;
+		}
+	}
+
+	&__checkout-mob-place {
+		@include _992 {
+			display: none;
 		}
 	}
 

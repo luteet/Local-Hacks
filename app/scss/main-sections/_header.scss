@@ -518,6 +518,10 @@
 	&__mob-chat-btn-place {
 		position: relative;
 		z-index: 3;
+
+		@include _992 {
+			display: none;
+		}
 	}
 
 	// .header__chat-btn

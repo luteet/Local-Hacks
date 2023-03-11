@@ -53,6 +53,9 @@ body {
 
 .section-start {
 	padding-top: var(--height-header, 69px);
+	@include _992 {
+		padding-top: var(--height-header, 124px);
+	}
 	transition: padding-top .2s ease;
 }
 
@@ -593,4 +596,16 @@ body {
 
 .swiper-scrollbar-drag {
 	background: var(--accent-dark);
+}
+
+.visible-on-table {
+	@include _992 {
+		display: none;
+	}
+}
+
+.hide-on-table {
+	@media (max-width: 991px) {
+		display: none;
+	}
 }
