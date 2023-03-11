@@ -3384,8 +3384,7 @@ body._active .header,body._active .header._active {
 
 .cheat__system-requirements--list dt {
     color: rgba(255,255,255,.42);
-    padding-right: 15px;
-    padding-top: 10px
+    padding: 10px 15px 0 0
 }
 
 .cheat__system-requirements--list>* {
@@ -4023,7 +4022,7 @@ body._active .header,body._active .header._active {
     }
 
     .cheat__system-requirements--list dt {
-        padding-top: 0
+        padding: 13px 15px 13px 0
     }
 
     .cheat__system-requirements--list dd:not(:last-child),.cheat__system-requirements--list dt:not(:nth-last-child(2)) {
