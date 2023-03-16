@@ -3312,6 +3312,7 @@ body._active .header,body._active .header._active {
     width: 100px;
     padding: 14px 15px;
     height: 44px;
+    font-size: .875rem;
     color: var(--white)
 }
 
